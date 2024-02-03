@@ -3,7 +3,7 @@ pymongo[src]
 dnspython
 pandas
 numpy
-ensure
-pytest
+ensure #ensure used to ensure something
+pytest  #for testing we use pytest
 
 -e .
