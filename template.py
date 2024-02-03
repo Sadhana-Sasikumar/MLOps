@@ -12,10 +12,10 @@ list_of_files =[
     "src/pipeline/__init__.py",
     "src/pipeline/training_pipeline.py",
     "src/pipeline/prediction_piepline.py",
-    "src/utils/__init__.py"
+    "src/utils/__init__.py",
     "src/utils/utils.py",
     "src/logger/logging.py",
-    "src/exception/exception"
+    "src/exception/exception.py",
     "tests/unit/__init__.py",
     "tests/integration/__init__.py",
     "init_setup.sh",
@@ -24,7 +24,7 @@ list_of_files =[
     "setup.py",
     "setup.cfg",
     "pyproject.toml",
-    "tox.ini",
+    "tox.ini", #to test in diff diff cases on a local enviornment
     "experiment/experiments.ipynb"
 ]
 
@@ -35,7 +35,7 @@ for filepath in list_of_files:
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"Creating directory: {filedir} for filr : {filename}")
 
-    if (not os.path.exists(filepath)) or (od.pth.getsize(filepath) == 0):
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, "w") as f:
             pass # create an empty file
 
